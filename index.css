@@ -1,0 +1,47 @@
+#menubar {
+    background-color: rgba(0,0,0,0.5);
+    height: 60px;
+    width: 100%;
+}
+
+#menubar-sticky-wrapper{
+    position: relative;
+    z-index: 200;
+}
+
+ul{
+    font-size: 0px;
+    height: 100%;
+    border: solid 1px pink;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    /*border: solid 1px blue;*/
+    width: 25%;
+    height: 100%;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+li:hover{
+    background-color: red;
+}
+
+.jacket-area {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.item {
+    width: 155px;
+    border: solid 1px #eee;
+}
+.item img {
+    width: 100%;
+}
+
+content{
+    border: solid 1px black;
+}
