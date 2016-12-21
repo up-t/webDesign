@@ -6,25 +6,43 @@
 //     });
 // });
 
+//masonry
 $(function() {
-    $('.jacket-area').masonry({
-        columnWidth: 160
+        $('.jacket-area').masonry({
+            columnWidth: 160
+        });
+});
+
+//張り付くメニューバー
+$(window).load(function(){
+    $("#menubar").sticky({ topSpacing: 0 });
+});
+
+/*   isotope start  */
+//ref:http://on-ze.com/archives/1868
+//初期化
+$(function() {
+    $('.jacket-area').isotope({
+        itemSelector: '.item',
+    });
+
+
+    $('.element a').click(function(){
+        console.log("test");
+        $('.element .current').removeClass('current');
+        $(this).addClass('current');
+     
+
+        var selector = $(this).attr('data-filter');
+        $('.jacket-area').isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+                }
+            });
+        return false;
     });
 });
-
-$(window).load(function(){
-   $("#menubar").sticky({ topSpacing: 0 });
-});
-
-$('.grid').isotope({
-  // options
-  itemSelector: '.grid-item',
-  layoutMode: 'fitRows'
-});
-
-$('#menubar').on( 'click', 'button', function() {
-  var filterValue = $( this ).attr('data-filter');
-  // use filterFn if matches value
-  filterValue = filterFns[ filterValue ] || filterValue;
-  $grid.isotope({ filter: filterValue });
-});
+/*   isotope end   */
