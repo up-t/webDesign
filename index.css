@@ -1,6 +1,24 @@
+header#title{
+    height: 500px;
+    background: url(img/title_bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    line-height: 500px;
+    font-size: 20px;
+    color: white;
+    font-family: arial, sans-serif;
+    text-shadow: 2px 2px 4px #ffc86e,
+                 -2px 2px 4px #ffc86e,
+                 2px -2px 4px #ffc86e,
+                 -2px -2px 4px #ffc86e;
+
+}
+
 /*メニューバー関連ここから*/
 #menubar {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.8);
     height: 60px;
     width: 100%;
 }
@@ -18,7 +36,7 @@ ul#menubar{
 
 li.element{
     /*border: solid 1px blue;*/
-    width: 25%;
+    width: 20%;
     height: 100%;
     font-size: 30px;
     display: inline-block;
@@ -26,16 +44,16 @@ li.element{
 }
 
 #menubar li:hover{
-    background-color: red;
+    background-color: #666;
 }
 
 .element a{
-    color: #eee;
+    color: black;
     text-decoration: none;
 }
 
 .element .current{
-    color: pink;
+    color: orange;
 }
 
 #menubar li a{
@@ -87,6 +105,7 @@ img#side{
 }
 /*サイドバー関連ここまで*/
 
+/*モーダル関連ここから*/
 /* モーダルウィンドウのスタイル */
 .modal {
   position:absolute;
@@ -112,7 +131,71 @@ img#side{
 .modal .inner {
   position:fixed;
   z-index:211;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  padding: 5%;
+  overflow: hidden;
 }
+
+.inner img{
+  width: 400px;
+  height: 400px;
+}
+.description{
+  float: right;
+  height: 400px;
+  width: 100%;
+  margin-left: -400px;
+  padding-left: 400px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+.description ul li{
+  margin-left: -20px;
+  list-style: none;
+}
+.soundcloud{
+  clear: both;
+}
+
+/*モーダル関連ここまで/*/
+h1.head{
+    position: relative;
+    padding: .25em 0 .5em .75em;
+    border-left: 20px solid #9cf;
+    color: orange;
+}
+h1.head::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #9cf;
+}
+
+h2.subhead{
+    position: relative;
+    padding: .25em 0 .5em .75em;
+    border-left: 6px solid #9cf;
+    margin-left: 50px;
+    color: orange;
+}
+h2.subhead::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #9cf;
+}
+
+.about{
+    margin-left: 70px;
+}
+
+footer{
+    margin-top: 20px;
+    font-size: 9px;
+}
+

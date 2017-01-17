@@ -62,6 +62,11 @@ $(function(){
         return false;
     });
      
+     //description内はクリックイベントを伝搬させない
+    $(".description").click(function(){
+        event.stopPropagation();
+    }); 
+
     // モーダルウィンドウが閉じるときの処理    
     $(".modalClose").click(function(){
         $(this).parents(".modal").fadeOut();
