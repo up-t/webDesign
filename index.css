@@ -1,3 +1,4 @@
+/*メニューバー関連ここから*/
 #menubar {
     background-color: rgba(0,0,0,0.5);
     height: 60px;
@@ -9,13 +10,12 @@
     z-index: 200;
 }
 
-ul{
+ul#menubar{
     font-size: 0px;
-    height: 100%;
-    border: solid 1px pink;
     margin: 0px;
     padding: 0px;
 }
+
 li.element{
     /*border: solid 1px blue;*/
     width: 25%;
@@ -25,8 +25,17 @@ li.element{
     text-align: center;
 }
 
-li:hover{
+#menubar li:hover{
     background-color: red;
+}
+
+.element a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.element .current{
+    color: pink;
 }
 
 #menubar li a{
@@ -36,23 +45,47 @@ li:hover{
     width: 100%;
     height: 100%;
 }
+/*メニューバー関連ここまで*/
 
+/*ジャケット関連ここから*/
 .jacket-area {
     width: 100%;
     max-width: 960px;
-    margin: 0 auto;
+    display: block;
+    margin: auto;
 }
 .item {
-    width: 155px;
-    border: solid 1px #eee;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
 }
 .item img {
     width: 100%;
+    -moz-transition: -moz-transform 0.2s linear;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    -o-transition: -o-transform 0.2s linear;
+    -ms-transition: -ms-transform 0.2s linear;
+    transition: transform 0.2s linear;
+}
+.item img:hover{
+    -webkit-transform:scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+/*ジャケット関連ここまで*/
+
+/*サイドバー関連ここから*/
+img#side{
+    height: 40px;
+    width: 40px;
 }
 
-content{
-    border: solid 1px black;
+.li-cont{
+    color: red;
 }
+/*サイドバー関連ここまで*/
 
 /* モーダルウィンドウのスタイル */
 .modal {
@@ -66,7 +99,7 @@ content{
  
 /* オーバーレイのスタイル */
 .overLay {
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   background:rgba(200,200,200,0.9);
@@ -77,7 +110,7 @@ content{
  
 /* モーダルウィンドウの中身のスタイル */
 .modal .inner {
-  position:absolute;
+  position:fixed;
   z-index:211;
   top:50%;
   left:50%;

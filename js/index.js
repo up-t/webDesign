@@ -9,7 +9,8 @@
 //masonry
 $(function() {
         $('.jacket-area').masonry({
-            columnWidth: 160
+            columnWidth: 160,
+            isFitWidth: true
         });
 });
 
@@ -71,5 +72,5 @@ $(function(){
 });
 
 $(document).ready(function() {
-    $('#simple-menu').sidr();
+    $('.simple-menu').sidr();
 });
