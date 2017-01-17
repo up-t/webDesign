@@ -3,16 +3,15 @@
 <head>
     <title>testpage</title>
 
-    <link rel="stylesheet" type="text/css" href="index.css"></style>
-    <link rel="stylesheet" href="slidebars.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="jquery.sidr.light.css">
 
 
 </head>
 <body>
-<div canvas="container">
     <header style="height: 300px; width: 100%;">
         test
-        <p class="sb-open-left">MENU</p>
+        <a id="simple-menu" href="#sidr">Toogle menu</a>
     </header>
 
     <div>
@@ -82,27 +81,30 @@
     <footer>
         Copyright(C) Ryo Ueoka. All Rights Reserved.
     </footer>
-</div>
 
-<div class="modal" id="001">
-    <div class="overLay modalClose"></div>
-    <div class="inner">
-        <img src="img/test.jpg">
-        <a href="" class="modalClose">Close</a>
+    <div class="modal" id="001">
+        <div class="overLay modalClose"></div>
+        <div class="inner">
+            <img src="img/test.jpg">
+            <a href="" class="modalClose">Close</a>
+        </div>
     </div>
-</div>
+    <div id="sidr">
+    <!-- Your content -->
+        <ul>
+            <li><a href="#">List 1</a></li>
+            <li class="active"><a href="#">List 2</a></li>
+            <li><a href="#">List 3</a></li>
+        </ul>
+    </div>
 
-<div off-canvas="sb-left left overlay">
-    aaaaaaaaaaaaa
-    <p class="sb-close">閉じる</p>
-</div>
 <!-- scriptパッケージ読み込み ここから -->
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="js/jquery.sticky.js"></script>
-    <script src="js/slidebars.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 <!-- scriptパッケージ読み込み ここまで -->
 </body>
