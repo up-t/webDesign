@@ -131,8 +131,9 @@ img#side{
 .modal .inner {
   position:fixed;
   z-index:211;
-  padding: 5%;
+  margin: 5%;
   overflow: hidden;
+  border: solid 2px orange;
 }
 
 .inner img{
@@ -145,6 +146,7 @@ img#side{
   width: 100%;
   margin-left: -400px;
   padding-left: 400px;
+  padding-right: 20px;
   word-wrap: break-word;
   box-sizing: border-box;
 }
@@ -152,6 +154,10 @@ img#side{
   margin-left: -20px;
   list-style: none;
 }
+.description ul a{
+  color: blue;
+}
+
 .soundcloud{
   clear: both;
 }
