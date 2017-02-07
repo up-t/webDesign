@@ -1,3 +1,4 @@
 # .DS_Storeを無視
 *.DS_Store
-
+#.gitignoreを無視
+*.gitignore
