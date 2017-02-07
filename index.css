@@ -133,7 +133,6 @@ img#side{
   z-index:211;
   margin: 5%;
   overflow: hidden;
-  border: solid 2px orange;
 }
 
 .inner img{
@@ -153,6 +152,7 @@ img#side{
 .description ul li{
   margin-left: -20px;
   list-style: none;
+  font-size: 12px;
 }
 .description ul a{
   color: blue;
